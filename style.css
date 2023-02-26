@@ -126,8 +126,8 @@ body {
     left: 49%;
     bottom: 50%;
     transform: translate(-63%, 20%);
-    display: none
-    ;
+    display: none;
+
 }
 .e404 img{
     border-radius: 10px;
@@ -179,12 +179,16 @@ body {
     padding: 3%;
     text-align: center;
     box-shadow: -2px 3px 0 #888, -4px 6px 0 #333;
+    transition: all 1s ease;
 }
 .music-btn:active{
     box-shadow: inset -3px 3px 0 #888;
 
 }
+.music-btn.playing{
+    box-shadow: inset -3px 3px 0 #888;
 
+}
 .button {
     width: 50%;
     padding: 4%;

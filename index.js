@@ -119,11 +119,13 @@ music.addEventListener("click",()=>{
     if(!isPlaying){
         audio.play();
         isPlaying = true;
+        music.classList.add("playing");
     }
     else{
         audio.currentTime = 0;
         audio.pause();
         isPlaying = false;
+        music.classList.remove("playing");
     }
 
    
