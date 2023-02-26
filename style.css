@@ -121,7 +121,18 @@ body {
 
     }
 }
-
+.e404{
+    position: absolute;
+    left: 49%;
+    bottom: 50%;
+    transform: translate(-63%, 20%);
+    display: none
+    ;
+}
+.e404 img{
+    border-radius: 10px;
+    width: 120%;
+}
 .pokemon-name {
     color: #3a444d;
     text-transform: capitalize;
@@ -200,11 +211,6 @@ body {
     padding: 10px;
     font-size: clamp(8px, 5vw, 1rem);
 }
-@media (min-width: 500){
-    .status{
-
-    }
-}
 .progress-container{
     display: flex;
     flex-direction: column;
@@ -212,7 +218,7 @@ body {
     font-size: clamp(8px, 5vw, 1rem);
 }
 .stats-text{
-    margin-left: 10px;
+    margin-left: 15%;
     font-size: clamp(4px, 5vw, 0.9rem);
 }
 .progress-bar{  

@@ -8,7 +8,7 @@ const btnPrev = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
 const pokemonTypes = document.querySelector('.types');
 const music = document.querySelector('.music-btn');
-
+const e404 = document.querySelector('.e404');
 
 const hp =document.querySelector(".hp");
 const atk =document.querySelector(".atk");
@@ -20,6 +20,7 @@ let isPlaying = false;
 let searchPoke = 1;
 
 const getData = async function (pokemon) {
+    e404.style.display = 'none';
     nameStats.innerHTML = 'Loading...'
     pokemonTypes.innerHTML = 'Loading..';
     pokemonName.innerHTML = 'Loading...';
@@ -66,6 +67,25 @@ const getData = async function (pokemon) {
         pokemonImage.style.display = 'none';
         pokemonName.innerHTML = 'Not found :c';
         pokemonNumber.innerHTML = '';
+        nameStats.innerHTML = ''
+        pokemonTypes.innerHTML = '';
+        e404.style.display = 'block'; 
+        searchPoke = 0;
+
+        hp.innerHTML = ' &nbsp;';
+        hp.style.width =  `50%`;
+
+        atk.innerHTML = '&nbsp;';
+        atk.style.width =  `50%`;
+
+        def.innerHTML = '&nbsp;';
+        def.style.width =  `50%`;
+
+        spa.innerHTML = '&nbsp;';
+        spa.style.width =  `50%`;
+
+        spd.innerHTML = '&nbsp;';
+        spd.style.width =  `50%`;
     }
 
     
@@ -84,8 +104,9 @@ btnNext.addEventListener("click", () => {
 });
 
 btnPrev.addEventListener("click", () => {
-    if (searchPoke === 1) {
-        return;
+    if (searchPoke <= 1) {
+        searchPoke = 1; 
+        getData(searchPoke);
     }
     else {
         searchPoke--;
