@@ -40,7 +40,7 @@ const getData = async function (pokemon) {
         searchPoke = data.id;
         hp.innerHTML = data.stats['0'].base_stat;
         hp.style.width = `${(data.stats['0'].base_stat * 80) / 230}%`;
-
+        
         atk.innerHTML = data.stats['1'].base_stat;
         atk.style.width = `${(data.stats['1'].base_stat * 80) / 230}%`;
 
