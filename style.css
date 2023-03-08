@@ -102,6 +102,7 @@ body {
     bottom: 55%;
     transform: translate(-63%, 20%);
     height: 18%;
+    z-index: 1;
 }
 
 .pokemon-data {
@@ -117,7 +118,7 @@ body {
         top: 52.5%
     }
     body{
-    min-height: 200vh;
+    min-height: 250vh;
 
     }
 }
@@ -214,12 +215,14 @@ body {
     color: #fff;
     padding: 10px;
     font-size: clamp(8px, 5vw, 1rem);
+    bottom: 30%;
+    left: 100%;
 }
 .progress-container{
     display: flex;
     flex-direction: column;
     text-align: left;
-    font-size: clamp(8px, 5vw, 1rem);
+
 }
 .stats-text{
     margin-left: 15%;
@@ -230,8 +233,8 @@ body {
     margin: 10px 5px;
     border-radius: 10px;
     text-align: center;
-    
-}
+
+  }
 .def {
     color: #fff !important;
     background-color: #2196F3 !important;
@@ -280,4 +283,14 @@ h3{
 
 .nameStats{
     text-transform: capitalize;
+}
+
+.terrain{
+  position: absolute;
+  left: 18%;
+  top: 27.5%;
+  border-radius: 7px;
+  width: 56%;
+  height: 25.5%;
+  border: 2px solid #3a444d;
 }
