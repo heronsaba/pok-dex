@@ -81,7 +81,7 @@
 body {
     text-align: center;
     background: linear-gradient(to bottom, #6ab7f5, #fff);
-    min-height: 130vh;
+    min-height: 150vh;
 }
 
 .main {
@@ -215,8 +215,7 @@ body {
     color: #fff;
     padding: 10px;
     font-size: clamp(8px, 5vw, 1rem);
-    bottom: 30%;
-    left: 100%;
+
 }
 .progress-container{
     display: flex;
